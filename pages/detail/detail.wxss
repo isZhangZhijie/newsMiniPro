@@ -1,0 +1,54 @@
+/* pages/detail/detail.wxss */
+@import "/wxParse/wxParse.wxss";
+
+#container {
+  padding: 30rpx;
+}
+.content {
+  padding: 0;
+}
+.title {
+  font-weight: bold;
+  font-size: 46rpx;
+  line-height: 1.4;
+  margin-bottom: 25rpx;
+}
+
+.after-head {
+  display: flex;
+  height: 80rpx;
+  /* justify-content: space-between; */
+  margin-bottom: 30rpx;
+}
+.head-icon {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  margin-right: 20rpx;
+  overflow: hidden;
+}
+.head-icon image {
+  width: 80rpx;
+  height: 80rpx;
+}
+.author-time {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.author {
+  font-size: 28rpx;
+}
+.time {
+  font-size: 22rpx;
+  color: #ccc;
+}
+
+.wxParse-p {
+  margin-bottom: 40rpx;
+  line-height: 1.6;
+  font-size: 38rpx;
+}
+.wxParse-img {
+  box-sizing: border-box;
+}

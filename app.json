@@ -1,0 +1,14 @@
+{
+  "pages":[
+    
+    "pages/index/index",
+    "pages/detail/detail",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#d43d3d",
+    "navigationBarTitleText": "头条新闻",
+    "navigationBarTextStyle":"white"
+  }
+}

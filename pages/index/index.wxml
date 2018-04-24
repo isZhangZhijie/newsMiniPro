@@ -1,0 +1,42 @@
+<!--index.wxml-->
+<view id="container">
+  <view class="nav">
+    <view class="search iconfont icon-search"></view>
+    <!-- 新闻种类栏start -->
+    <scroll-view scroll-x class="nav-bar">
+      <view wx:for="{{newsKind}}"
+        class="{{item.key == selected ? 'active' : ''}}"
+        bindtap="selKind"
+        data-key="{{item.key}}"
+        wx:key="{{item.key}}"
+      >{{item.name}}</view>
+    </scroll-view>
+    <!-- 新闻种类栏end -->
+    <view class="user">
+      <view class="iconfont icon-add"></view>
+      <view class="iconfont icon-user"></view>
+    </view>
+  </view>
+  <!-- 新闻列表 start -->
+  <swiper duration="{{duration}}" current-item-id="{{selected}}" style="height:{{newsContHeight}}px" bindchange="change">
+    <swiper-item item-id="{{item.key}}" wx:key="{{item.matchId}}" data-matchId="{{item.matchId}}" class="news-cont" wx:for="{{newsKind}}">
+      <scroll-view class="list" style="height:100%;" bindscrolltolower="scrolltolower" scroll-y>
+        <!-- 单条新闻 start -->
+        <block wx:for="{{newsList}}">
+          <navigator url="../detail/detail?id={{item.docid}}" class="item">
+            <view class="left">
+              <view class="title">{{item.title}}</view>
+              <view class="source">{{item.source}}</view>
+            </view>
+            <view class="right">
+              <image src="{{item.img || item.imgsrc}}"></image>
+            </view>
+          </navigator>
+        </block>
+        <!-- 单条新闻 end -->
+        <view class="item">页面加载中...</view>
+      </scroll-view>
+    </swiper-item>
+  </swiper >
+  <!-- 新闻列表 end -->
+</view>

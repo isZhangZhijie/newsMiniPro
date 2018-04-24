@@ -1,0 +1,88 @@
+/**index.wxss**/
+@import "../common/common.wxss";
+#container {
+
+}
+.nav {
+  display: flex;
+  align-items: center;
+  height: 90rpx;
+  border-bottom: 1px solid #eee;
+}
+.search {
+  width: 90rpx;
+  display: flex;
+  font-size: 40rpx;
+  text-align: center;
+  justify-content: center;
+}
+.nav-bar {
+  width:480rpx;
+  height: 100%;
+  line-height: 90rpx;
+  white-space: nowrap; 
+  font-size: 32rpx;
+}
+.nav-bar view {
+   display:inline-block;  
+  padding: 0 16rpx;
+}
+.nav-bar .active {
+  position: relative;
+  color: #d43d3d;
+}
+.nav-bar .active::after {
+  position: absolute;
+  width: 70%;
+  height: 6rpx;
+  background: #d43d3d;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  bottom: 5rpx;
+  z-index: 10;
+  content: "";
+}
+.user {
+  display: flex;
+  height: 100%;
+  justify-content: space-around;
+  align-items: center;
+  flex: 1;
+  border-left: 1px solid #eee;
+}
+.user view {
+  font-size: 40rpx;
+}
+
+
+
+.news-cont {
+  padding: 0 30rpx;
+  box-sizing: border-box;
+}
+.item {
+  display: flex;
+  justify-content: space-between;
+  padding: 30rpx 0;
+  border-bottom: 1px solid #eee;
+}
+.item .left {
+  margin-right: 10rpx;
+}
+.item .left .title {
+  font-size: 34rpx;
+  line-height: 1.5;
+  margin-bottom: 25rpx;
+}
+.item .left .source {
+  font-size: 24rpx;
+  color: #aaa
+}
+
+
+
+.right image {
+  width: 225rpx;
+  height: 150rpx;
+}

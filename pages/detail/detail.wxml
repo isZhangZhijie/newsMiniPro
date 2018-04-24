@@ -1,0 +1,18 @@
+<!--pages/detail/detail.wxml-->
+<import src="/wxParse/wxParse.wxml"/>
+<view id="container">
+  <view class="title">{{detail.title}}</view>
+  <view class="after-head">
+    <view class="head-icon">
+      <image wx:if="{{detail.sourceinfo}}" mode="aspectFit" src="{{detail.sourceinfo.topic_icons}}"></image>
+      <image wx:else mode="aspectFit" src="https://picsum.photos/100/100/?random"></image>
+    </view>
+    <view class="author-time">
+      <view class="author">{{detail.source}}</view>
+      <view class="time">{{detail.ptime}}</view>
+    </view>
+  </view>
+  <view class="content">
+    <template is="wxParse" data="{{wxParseData:body.nodes}}"/> 
+  </view>
+</view>
